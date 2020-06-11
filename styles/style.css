@@ -85,11 +85,15 @@ img.active {
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
   #spiega {
-    /* border: 1px solid red; */
     margin: 20px;
     width: unset;
   }
   #spiega .text {
-    flex: 3;
+    /* border: 1px solid red; */
+    flex: 1;
+  }
+  #spiega .icons {
+    /* border: 1px solid red; */
+    flex: 1;
   }
 }
