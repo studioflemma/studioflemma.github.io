@@ -7,8 +7,7 @@ id: home
 <!-- ![flemma-x]({% if jekyll.environment == "production" %}/flemma{% endif %}/images/StudioFlemma006.jpg) -->
 <div id="gallery">
 {% for img in site.data.images.animation %}
-{% capture url %}{% if jekyll.environment == "production" %}/flemma{% endif %}/images/{{img.file}}{% endcapture %}
-<img src="{{url}}"/>
+<img src="/images/{{img.file}}"/>
 {% endfor %}
 </div>
 <script>
