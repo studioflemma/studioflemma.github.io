@@ -81,7 +81,9 @@ img.active {
   height: 30px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
   #spiega {
     /* border: 1px solid red; */
     margin: 20px;
