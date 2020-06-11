@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns:x="&ns_extend;" xmlns:i="&ns_ai;" xmlns:graph="&ns_graphs;"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+   style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+  .st0{fill:none;stroke:#000000;stroke-width:5.3437;stroke-miterlimit:10;}
+</style>
+<switch>
+  <g i:extraneous="self">
+    <g>
+      <circle class="st0" cx="50" cy="50" r="20"/>
+      <path class="st0" d="M71.4,90.1H28.6c-10.3,0-18.7-8.4-18.7-18.7V28.6c0-10.3,8.4-18.7,18.7-18.7h42.7c10.3,0,18.7,8.4,18.7,18.7
+        v42.7C90.1,81.7,81.7,90.1,71.4,90.1z"/>
+      <circle cx="75.2" cy="25.3" r="5.3"/>
+    </g>
+  </g>
+</switch>
+</svg>
