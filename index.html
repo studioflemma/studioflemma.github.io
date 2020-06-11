@@ -8,9 +8,13 @@ id: home
 </header>
 <!-- ![flemma-x]({% if jekyll.environment == "production" %}/flemma{% endif %}/images/StudioFlemma006.jpg) -->
 <div id="gallery">
+<a href="/about">
+<div>
 {% for img in site.data.images.animation %}
-<img src="/images/{{img.file}}"/>
+  <img src="/images/{{img.file}}"/>
 {% endfor %}
+</div>
+</a>
 </div>
 <script>
 imgs = Array.from(document.getElementsByTagName('img'));

@@ -5,8 +5,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  display: inline-block;
+}
+
 a {
   color: inherit;
+  text-decoration: inherit;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" style="font-size: 40px; font-family: Arial, Helvetica, sans-serif;"><text y="25">ɛ</text></svg>'), auto;
 }
 
 * {
