@@ -37,7 +37,7 @@ header {
   margin: 20px;
 }
 
-#gallery, #spiega {
+#gallery {
   flex: 1;
   overflow: hidden;
   position: relative;
@@ -60,6 +60,7 @@ img.active {
 }
 
 #spiega {
+  flex: 1 0 auto;
   margin-top: 8%;
   font-size: 120%;
   width: 33%;
@@ -94,6 +95,7 @@ and (max-device-width : 667px) {
   }
   #spiega .icons {
     /* border: 1px solid red; */
+    margin-top: 20px;
     flex: 1;
   }
 }
