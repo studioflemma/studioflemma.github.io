@@ -86,6 +86,7 @@ img.active {
 and (min-device-width : 375px)
 and (max-device-width : 667px) {
   #spiega {
+    font-size: 100%;
     margin: 20px;
     width: unset;
   }
