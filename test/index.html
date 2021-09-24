@@ -34,6 +34,50 @@ bodycopy { padding: unset !important; }
 </div>
 </a>
 <script type="text/javascript">
+  // delay in milliseconds, how long should an image be visible
+  const delay = 150
+  // pause every mod images
+  const mod = 9
+  // pause for milliseconds
+  const pauseFor = 2300
+  // get images from cargo gallery
+  const imgs = document.querySelectorAll('#slideshow img')
+  imgs.forEach((img, i) => { img.onload = () => {console.log('img loaded', i)}})
+  // images total
+  const l = imgs.length
+  // scroll to middle of image
+  scrollToMiddle = () => {
+    if (window.innerHeight < window.innerWidth) {
+      window.scroll({top: ( imgs[0].scrollHeight - window.innerHeight ) / 2})
+    }
+  }
+  // show image at idx
+  toggle = (idx) => {
+    imgs.forEach((img, i) => { if (i != idx) img.style.display = 'none' })
+    imgs[idx].style.display = 'block'
+  }
+  // animation
+  let idx = 0
+  animate = () => {
+    idx += 1
+    toggle(idx % l)
+    if (0 == idx % mod) {
+      to = pauseFor
+    } else {
+      to = delay
+    }
+    setTimeout(() => {requestAnimationFrame(animate)}, to)
+  }
+  // wait for page to be loaded
+  appStart = (w) => {
+    console.log('app start', w)
+    // scroll to middle of the first image
+    scrollToMiddle()
+    // start animation
+    animate()
+  }
+
+  appStart()
 
 </script>
 </body>
