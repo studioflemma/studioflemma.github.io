@@ -42,9 +42,22 @@ bodycopy { padding: unset !important; }
   const pauseFor = 2300
   // get images from cargo gallery
   const imgs = document.querySelectorAll('#slideshow img')
-  imgs.forEach((img, i) => { img.onload = () => {console.log('img loaded', i)}})
   // images total
   const l = imgs.length
+  let loadedImgs = []
+  const checkAllLoaded = (cb) => {
+    if (l == loadedImgs.length) {
+      console.log('images loaded')
+      cb()
+    }
+  }
+  imgs.forEach((img, i) => {
+    img.onload = () => {
+      console.log('img loaded', i)
+      loadedImgs.push(i)
+      checkAllLoaded(appStart)
+    }
+  })
   // scroll to middle of image
   scrollToMiddle = () => {
     if (window.innerHeight < window.innerWidth) {
@@ -69,7 +82,7 @@ bodycopy { padding: unset !important; }
     setTimeout(() => {requestAnimationFrame(animate)}, to)
   }
   // wait for page to be loaded
-  appStart = (w) => {
+  const appStart = (w) => {
     console.log('app start', w)
     // scroll to middle of the first image
     scrollToMiddle()
