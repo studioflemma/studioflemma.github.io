@@ -55,6 +55,7 @@ bodycopy { padding: unset !important; }
     img.onload = () => {
       console.log('img loaded', i)
       loadedImgs.push(i)
+      requestAnimationFrame(() => { toggle(i)} )
       checkAllLoaded(appStart)
     }
   })
